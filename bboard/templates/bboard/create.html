@@ -1,11 +1,15 @@
 {% extends "layout/basic.html" %}
 {% block content %}
-    <div>
-        <h1>Добавление объеявления</h1>
-        <form method="post">
+    <div class="card">
+      <div class="card-header">
+       <h1>Добавление объеявления</h1>
+      </div>
+      <div class="card-body">
+       <form method="post">
             {% csrf_token %}
             {{ form.as_p }}
-            <input type="submit" value="Добавить">
+            <input type="submit" value="Добавить" type="button" class="btn btn-success">
         </form>
+      </div>
     </div>
 {% endblock %}
